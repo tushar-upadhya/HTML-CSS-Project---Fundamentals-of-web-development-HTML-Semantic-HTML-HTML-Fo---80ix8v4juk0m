@@ -1,75 +1,74 @@
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
-
-* {
-    box-sizing: border-box;
+*{
+  box-sizing: border-box;
 }
-
 body{
-    background-color: rgba(155, 89, 182, 0.7);
-    font-display: 'open sans', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;
+margin: 0;
 }
 
-.phone{
-    position: relative;
-    overflow: hidden;
-    border: 3px solid #eee;
-    border-radius: 15px;
-    height: 600px;
-    width: 340px;
-}
+.container{
+  background-color: #fff;
+  border: 3px #000 solid;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 1000px;
+  text-align: center;
 
-.phone .content {
-    opacity: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: calc(100% - 60px);
-    width: 100%;
-    transition: opacity 0.4s ease;
 }
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
 
-.phone .content.show {
-    opacity: 1;
+
 }
+.code{
+  border-radius: 5px;
+  font-size: 75px;
+  height: 120px;
+  width: 100px;
+  border: 1px solid #eee;
+  margin: 1%;
+  text-align: center;
+  font-weight: 300;
+  -moz-appearance: textfield;
 
-nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-top: -5px;
-    width: 100%;
 }
-
-nav ul {
-    background-color: #fff;
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 60px;
+.code::-webkit-inner-spin-button,
+.code::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
 }
+.code:valid {
+border-color: #3498db;
+box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
 
-nav li {
-    color: #777;
-    cursor: pointer;
-    flex: 1;
-    padding: 10px;
-    text-align: center;
 }
+.info {
+background-color: #eaeaea;
+display: inline-block;
+padding: 10px;
+line-height: 20px;
+max-width: 400px;
+color: #777;
+border-radius: 5px;
 
-nav ul li p {
-    font-size: 12px;
-    margin: 2px 0;
 }
+@media(max-width:800px){
+  .code-container{
+      flex-wrap: wrap;
 
-nav ul li:hover,
-nav ul li.active {
-    color: #8e44ad;
+  }
+  .code{
+      font-size: 50px;
+      height: 70px;
+      max-width: 60px;
+      
+  }
 }
